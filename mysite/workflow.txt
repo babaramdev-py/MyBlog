@@ -3,3 +3,9 @@
 2.) Set up URLs.py and Forms.py in Application file 'blog'
 
 3.) Set up models.py file!
+
+4.) Set up the forms.py file along with widgets for each form field.
+    Added Styling to target that field using attrs in widgets dict.
+    Also set up static files and templates.
+
+5.) Set up class based views and 
