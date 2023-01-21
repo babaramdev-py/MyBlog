@@ -3,7 +3,7 @@ from blog.models import Post,Comment
 
 class PostForm(forms.ModelForm):
     class Meta():
-        models = Post
+        model = Post
         fields = ('author','title','text')
         widgets = {
             'title':forms.TextInput(attrs={'class':'textinputclass'}),

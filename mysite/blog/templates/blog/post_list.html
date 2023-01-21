@@ -5,6 +5,7 @@
 {% block content %}
 <div class="centerstage">
 
+    <h1>Here are are all the posts on my blog!</h1>
 
     {% for post in post_list %}
         <div class="post">
@@ -15,6 +16,8 @@
             </div>
             <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
         </div>
+    {% empty %}
+        <h2>No Blogs Yet! Wait for them!</h2>
     {% endfor %}
 </div>
 {% endblock%}

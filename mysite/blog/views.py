@@ -37,10 +37,11 @@ class PostDetailView(DetailView):
 
 
 class CreatePostView(LoginRequiredMixin,CreateView):
+    model = Post
     login_url = '/login/' #if  not logged go to /login
     redirect_field_name = 'blog/post_detail.html' #
     form_class = PostForm
-    model = Post
+
 
 
 
@@ -69,7 +70,6 @@ class DraftListView(LoginRequiredMixin,ListView):
     
 
 # 
-@login_required
 def add_comment_to_post(request,pk):
     post = get_object_or_404(Post,pk=pk)
     if request.method == 'POST':
@@ -94,10 +94,10 @@ def comment_remove(request,pk):
     comment = get_object_or_404(Comment,pk=pk)
     post_pk = comment.post.pk
     comment.delete()
-    redirect('post_detail',pk=post_pk)
+    return redirect('post_detail',pk=post_pk)
 
 @login_required
 def post_publish(request,pk):
     post = get_object_or_404(Post,pk=pk)
-    post.publish
-    return redirect('post_detail',pk=pk)
+    post.publish()
+    return redirect('post_list')
