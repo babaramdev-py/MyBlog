@@ -11,3 +11,5 @@
 5.) Set up class based views and CRUD views for views.py file in blog app.
 
 6.) Set up all the templates in the blog and registration folder of TEMPLATES
+
+7.) Set up comment FBV views for all the comments using decorators like login_required,
