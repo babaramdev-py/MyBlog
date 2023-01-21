@@ -8,4 +8,6 @@
     Added Styling to target that field using attrs in widgets dict.
     Also set up static files and templates.
 
-5.) Set up class based views and 
+5.) Set up class based views and CRUD views for views.py file in blog app.
+
+6.) Set up all the templates in the blog and registration folder of TEMPLATES
