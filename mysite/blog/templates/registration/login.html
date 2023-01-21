@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    <div class="mt-4 p-5 bg-light text-dark rounded-3">
+        <h1>Please Login: </h1>
+        <h3>(Must be Super User, please check with the site admin)</h3>
+        {% if form.errors %}
+            <p>Your username and password are incorrect, please try again</p>
+        {% endif %}
+
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+                {% form.as_p %}
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="hidden" name="next" value="{{next}}">
+        </form>
+    </div>
+
+
+
+{% endblock content %}
