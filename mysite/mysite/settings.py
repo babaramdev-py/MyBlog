@@ -25,9 +25,11 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'blog/templates/blog')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SECRET_KEY = 'p%3-f$-ade$si=60ig-wm03e12c1^u)ji9=foev2c+8$mg^6-p'
+
 ALLOWED_HOSTS = []
 
-SECRET_KEY = 'p%3-f$-ade$si=60ig-wm03e12c1^u)ji9=foev2c+8$mg^6-p'
+
 # Application definition
 
 INSTALLED_APPS = [
